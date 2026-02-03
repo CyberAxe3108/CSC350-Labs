@@ -1,0 +1,19 @@
+Console.WriteLine("Enter two numbers: ");
+string input1 = Console.ReadLine();
+string input2 = Console.ReadLine();
+Random rand = new Random();
+int num1 = rand.Next(input1, input2);
+Console.WriteLine("Guess the number between " + input1 + " and " + input2);
+int guess = Console.ReadLine();
+while (guess != num1)
+{
+    if (guess < num1)
+    {
+        Console.WriteLine("Too low! Try again.");
+    }
+    else
+    {
+        Console.WriteLine("Too high! Try again.");
+    }
+    guess = Console.ReadLine();
+}
